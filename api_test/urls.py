@@ -7,5 +7,5 @@ from api_main import views
 urlpatterns = [
     url(r'^magicBox/', views.magic_box_all.as_view()),
 ]
-
+handler404 = 'api_main.views.custom_404'
 urlpatterns = format_suffix_patterns(urlpatterns)

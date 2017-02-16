@@ -39,3 +39,6 @@ class magic_box_all(APIView):
 			items.append(single_item)
 		serialized_items = magic_box_all_serializer(items, many=True)
 		return Response(serialized_items.data)
+
+def custom_404(request):
+	return HttpResponse("404: Not Found. Contact sachin.agrian@gmail.com if you think this is an error")
