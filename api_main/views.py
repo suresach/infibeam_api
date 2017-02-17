@@ -27,8 +27,8 @@ class magic_box_all(APIView):
 		all_item_prices = [x.find('span', {"class" : "price"}).text for x in all_item_price]
 		#get all items' name and link
 		mb_items_all = soup.findAll("h1", {'class':re.compile('^product-title-')})
-		if (len(mb_items_all) != 56):
-			return Response("Internal Error")
+		# if (len(mb_items_all) != 56):
+		# 	return Response("Internal Error")
 		print(len(mb_items_all))
 		item_names = [x.find('a').text for x in mb_items_all]
 		all_item_names = item_names[::2]
