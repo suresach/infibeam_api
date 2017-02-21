@@ -18,7 +18,7 @@ class magic_box_product(object):
 
 class magic_box_all(APIView):
 	def get(self, request):
-		url = 'https://www.infibeam.com/deal-of-the-day/'
+		url = 'https://www.infibeam.com/MagicBox.action'
 		req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
 		f = urllib.request.urlopen(req)
 		soup = BeautifulSoup(f, 'html.parser')
